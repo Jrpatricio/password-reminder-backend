@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AppResponse {
     Long id;
+    String appName;
     String username;
     String password;
 }

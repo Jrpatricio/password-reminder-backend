@@ -11,6 +11,9 @@ import javax.validation.constraints.NotNull;
 public class AppRequest {
 
     @NotBlank
+    private String appName;
+
+    @NotBlank
     private String user;
 
     @NotBlank

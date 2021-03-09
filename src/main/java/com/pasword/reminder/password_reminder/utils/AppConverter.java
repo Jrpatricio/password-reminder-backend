@@ -16,11 +16,12 @@ public class AppConverter {
     }
 
     public static App coverteAppDtoToApp(AppRequest appRequest, User user) {
-        return App.builder().userApp(appRequest.getUser()).passwordApp(appRequest.getPassword()).user(user).build();
+        return App.builder().appName(appRequest.getAppName()).userApp(appRequest.getUser())
+                .passwordApp(appRequest.getPassword()).user(user).build();
     }
 
     public static AppResponse coverteAppToAppResponse(App app) {
-        return AppResponse.builder().id(app.getId()).username(app.getUserApp()).password(app.getPasswordApp()).build();
+        return AppResponse.builder().id(app.getId()).appName(app.getAppName()).username(app.getUserApp()).password(app.getPasswordApp()).build();
     }
 
     public static AppsResponse converteApptoAppsResponse(List<App> apps) {
@@ -36,6 +37,7 @@ public class AppConverter {
             apps.forEach(app -> {
                 AppResponse appResponse = new AppResponse();
                 appResponse.setId(app.getId());
+                appResponse.setAppName(app.getAppName());
                 appResponse.setUsername(app.getUserApp());
                 appResponse.setPassword(app.getPasswordApp());
                 appResponseList.add(appResponse);

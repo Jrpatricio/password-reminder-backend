@@ -23,6 +23,9 @@ public class App implements Serializable {
     private Long id;
 
     @NotBlank
+    private String appName;
+
+    @NotBlank
     private String userApp;
 
     @NotBlank
