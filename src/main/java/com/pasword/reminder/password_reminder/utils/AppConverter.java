@@ -30,7 +30,7 @@ public class AppConverter {
         if (!apps.isEmpty()) {
             User user = apps.get(0).getUser();
             List<AppResponse> appResponseList = new ArrayList<>();
-            appsResponse.setUserCode(user.getId());
+            appsResponse.setUserId(user.getId());
             appsResponse.setName(user.getName());
             appsResponse.setUser(user.getEmail());
             appsResponse.setApps(appResponseList);
@@ -40,6 +40,8 @@ public class AppConverter {
                 appResponse.setAppName(app.getAppName());
                 appResponse.setUsername(app.getUserApp());
                 appResponse.setPassword(app.getPasswordApp());
+                appResponse.setCreatedAt(app.getCreatedAt());
+                appResponse.setUpdatedAt(app.getUpdatedAt());
                 appResponseList.add(appResponse);
             });
         }

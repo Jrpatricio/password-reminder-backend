@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class App implements Serializable {
+public class App extends AuditEvents implements Serializable {
 
     private static final long serialVersionUID = 6861698493877608766L;
 

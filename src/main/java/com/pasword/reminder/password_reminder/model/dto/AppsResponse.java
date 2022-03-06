@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AppsResponse {
-    Long userCode;
+    Long userId;
     String name;
     String user;
     List<AppResponse> apps;

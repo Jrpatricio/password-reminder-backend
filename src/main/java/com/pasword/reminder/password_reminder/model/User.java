@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable {
+public class User extends AuditEvents implements Serializable {
 
     private static final long serialVersionUID = 6745558535142552074L;
 
